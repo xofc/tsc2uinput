@@ -6,7 +6,9 @@ though the I2C bus (on the connector P1 of Raspberries) and sends events
 to /dev/uinput.  It is to be used with the Tontek / MZTX-PI-EXT LCD Touchscreen.
 
 /etc/rc.local launches 
+<pre>
 /usr/local/bin/mztx06a & # touchscreen Tontec
+</pre>
 which sends screen buffer diffs through the SPI bus (which is slow and computer intensive)
 
 Relevant documents :
@@ -21,9 +23,9 @@ Notes :
 * Touchpad emulation with relative events should probably be more appropriate
 
 Setup in /boot/config.txt (mztx06a is in 'landscape' mode)
-
+<pre>
 framebuffer_width=320
 framebuffer_height=240
-
+</pre>
 ----------------
 There now exist affordable HDMI LCD screens.
